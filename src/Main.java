@@ -2,6 +2,14 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("hello");
+        ListNode node1 = newListNode1();
+        ListNode node2 = newListNode2();
+        ListNode[] nodeList = new ListNode[] {node1,node2};
+        LinkListQua.mergeKLists(nodeList);
+
+    }
+
+    public static ListNode newListNode2() {
         ListNode nodeFirst = new ListNode(1);
         ListNode nodeScenod = new ListNode(2);
         ListNode nodeThird = new ListNode(3);
@@ -14,17 +22,22 @@ public class Main {
         node4.next = node5;
         node5.next = null;
         String test="34556&783020&=";
-        System.out.println(test);
 
-       ListNode head =  LinkListQua.swapParis(nodeFirst);
-       ListNode expect = equalListNodeFirst();
-       if (head.equals(expect)) {
-           System.out.println("Success");
-       } else {
-           System.out.println("failure");
-       }
-        System.out.println(head);
+        return nodeFirst;
+    }
 
+    public static ListNode newListNode1() {
+        ListNode nodeFirst = new ListNode(1);
+        ListNode nodeScenod = new ListNode(3);
+        ListNode nodeThird = new ListNode(3);
+        ListNode node4 = new ListNode(4);
+
+        nodeFirst.next = nodeScenod;
+        nodeScenod.next = nodeThird;
+        nodeThird.next = node4;
+        node4.next = null;
+
+        return nodeFirst;
     }
 
     public static ListNode equalListNodeFirst() {
