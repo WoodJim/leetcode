@@ -1,11 +1,14 @@
+import array.ArrayQuaTest;
+import list.ListNode;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("hello");
-        ListNode node1 = newListNode1();
-        ListNode node2 = newListNode2();
-        ListNode[] nodeList = new ListNode[] {node1,node2};
-        LinkListQua.mergeKLists(nodeList);
+//        System.out.println("hello");
+//        ListNode node1 = newListNode1();
+//        ListNode node2 = newListNode2();
+//        ListNode[] nodeList = new ListNode[] {node1,node2};
+//        LinkListQua.mergeKLists(nodeList);
 
     }
 

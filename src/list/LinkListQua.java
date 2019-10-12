@@ -1,5 +1,17 @@
+package list;
+
 public class LinkListQua {
 
+
+    /**
+     * https://leetcode.com/problems/swap-nodes-in-pairs/
+     * 24 Swap Nodes in Pairs
+     *
+     * Given 1->2->3->4,
+     * you should return the list as 2->1->4->3.
+     * @param head
+     * @return
+     */
     public static ListNode swapParis(ListNode head) {
         if (head == null) {
             return null;
@@ -37,7 +49,7 @@ public class LinkListQua {
         return head;
     }
 
-    public static ListNode swapTwoNode(ListNode pre, ListNode node, ListNode next) {
+    private static ListNode swapTwoNode(ListNode pre, ListNode node, ListNode next) {
         if (next == null) {
             return node;
         }
