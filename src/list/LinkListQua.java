@@ -125,4 +125,43 @@ public class LinkListQua {
         return head.next;
     }
 
+
+    /**
+     * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+     *
+     * Given linked list: 1->2->3->4->5, and n = 2.
+     *
+     * return  1->2->3->5.
+     * @param head
+     * @param n
+     * @return
+     */
+    public static  ListNode removeNthFromEnd(ListNode head, int n) {
+        if (head == null || n <=0) {
+            return head;
+        }
+        ListNode quickTmp = head;
+        int index = 0;
+        while (index < n && quickTmp != null) {
+            quickTmp = quickTmp.next;
+            index++;
+        }
+
+        //remove the head node;
+        if (quickTmp == null) {
+            ListNode tmp = head.next;
+            head.next = null;
+            return tmp;
+        }
+        ListNode slowTmp = head;
+        while (quickTmp.next != null) {
+            slowTmp = slowTmp.next;
+            quickTmp = quickTmp.next;
+        }
+
+        slowTmp.next = slowTmp.next.next;
+
+        return head;
+    }
+
 }
